@@ -1,0 +1,31 @@
+---
+title: "R Markdown Presentation & Plotly"
+author: "Littymol Chacko"
+date: "10/22/2020"
+output: ioslides_presentation
+editor_options: 
+  chunk_output_type: console
+---
+
+
+## Diamonds
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(plotly)
+library(ggplot2)
+plot_ly(diamonds, x = ~clarity, y=~log(price), color = ~cut)
+
+
+```
+
+## Frequency polygons 
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+p <- ggplot(diamonds, aes(x = log(price), color = clarity)) + 
+    geom_freqpoly(binwidth= 30)
+ggplotly(p)
+```
+
+## Thank you
+
