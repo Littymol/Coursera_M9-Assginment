@@ -2,8 +2,10 @@
 title: "R Markdown Presentation & Plotly"
 author: "Littymol Chacko"
 date: "10/22/2020"
-output: ioslides_presentation
-editor_options: 
+output:
+  ioslides_presentation: default
+  slidy_presentation: default
+editor_options:
   chunk_output_type: console
 ---
 
